@@ -20,8 +20,8 @@ function Regulation() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     <div className="buttons-regulation">
-                            <Link className="btn-regulation">VER REGULAMENTO COMPLETO</Link>
-                            <Link className="btn-regulation-2">ONDE USAR MEUS CUPONS?</Link>
+                            <Link className="btn-regulation"  to='/regulation'>VER REGULAMENTO COMPLETO</Link>
+                            <Link className="btn-regulation-2" to='/companies'>ONDE USAR MEUS CUPONS?</Link>
                     </div>
                     </div>
                     

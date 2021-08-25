@@ -18,7 +18,7 @@ function Header() {
                     <Link className="btn-header"  to='/searchcupom'>VER MEUS CUPONS</Link>
                     <Link className="btn-header-2" to='/validatecupom'>VALIDAR CUPOM</Link>
 
-                   <Link to="/">VER REGULAMENTO COMPLETO</Link>
+                   <Link  to='/regulation'>VER REGULAMENTO COMPLETO</Link>
                 </div>
             </div>
         </div>

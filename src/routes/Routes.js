@@ -10,6 +10,8 @@ import ValidadeCupom from '../pages/ValidadeCupom/ValidadeCupom';
 import NewCompany from '../pages/NewCompany/NewCompany';
 import SignUp from '../pages/SignUp/SignUp';
 import SignIn from '../pages/SignIn/SignIn';
+import Companies from '../pages/Companies/Companies';
+import RegulationPage from '../pages/RegulationPage/RegulationPage';
 
 
 function Routes() {
@@ -24,6 +26,8 @@ function Routes() {
             <RouteWrapper exact path="/signin" component={SignIn} />
             <RouteWrapper exact path="/signup" component={SignUp} />
             <RouteWrapper exact path="/newcompany" component={NewCompany} />
+            <RouteWrapper exact path="/companies" component={Companies} />
+            <RouteWrapper exact path="/regulation" component={RegulationPage} />
         </Switch>
     )
 }

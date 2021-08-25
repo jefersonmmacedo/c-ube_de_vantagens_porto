@@ -18,10 +18,10 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/Regulamento' activeStyle>
+          <NavLink to='/regulation' activeStyle>
           Regulamento
           </NavLink>
-          <NavLink to='/ondeusar' activeStyle>
+          <NavLink to='/companies' activeStyle>
             Onde Usar?
           </NavLink>
           <NavLink to='/partners' activeStyle>

@@ -1,0 +1,51 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+.box h1 {
+    margin-bottom: 20px ;
+}
+
+.box .form-company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2E4562;
+    border-radius: 8px;
+    padding: 10px;
+    width: 70%;
+}
+
+.box .form-company label {
+    margin: 20px 0 5px 0;
+}
+
+.box .form-company button {
+    width: 30%;
+    padding: 10px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+    border: none;
+    border-radius: 8px;
+    background-color:#2E4562;
+    color: #fff;
+}
+
+.box .form-company span {
+    font-weight: 700;
+    margin-top: 25px;
+}
+.box .form-company input, textarea, select {
+    border: 1px solid #2E4562;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    color:#2E4562 ;
+    font-weight: 700;
+    width: 80%;
+  }

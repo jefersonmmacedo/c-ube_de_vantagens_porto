@@ -15,10 +15,10 @@ function Footer() {
             </div>
             <div className="footer-2">
                 <h3>NAVEGAÇÃO</h3>
-                <Link>REGULAMENTO</Link>
-                <Link>ONDE USAR?</Link>
-                <Link>SEJA UM PARCEIRO</Link>
-                <Link>FALE CONOSCO</Link>
+                <Link to='/regulation'>REGULAMENTO</Link>
+                <Link to='/companies'>ONDE USAR?</Link>
+                <Link to='/partners'>SEJA UM PARCEIRO</Link>
+                <Link to='/contact'>FALE CONOSCO</Link>
             </div>
             <div className="footer-3">
                 <h3>CUPONS</h3>

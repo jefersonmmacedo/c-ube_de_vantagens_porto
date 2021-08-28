@@ -11,7 +11,7 @@ import {
 
 const Navbar = () => {
   return (
-    <>
+    <div className="container">
       <Nav>
         <NavLink to='/'>
           <img src={logoImg} alt='logo' />
@@ -37,7 +37,7 @@ const Navbar = () => {
           <NavBtnLink to='/searchcupom'>VER MEUS CUPONS</NavBtnLink>
         </NavBtn>
       </Nav>
-    </>
+    </div>
   );
 };
 

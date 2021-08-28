@@ -7,6 +7,8 @@ import './contact.css'
  
 function Contact() {
     return (
+        <div className="container">
+        <div className="content">
         <div className="contact">
             <div className="map">
             <img src={mapImg} alt="maps" />
@@ -20,6 +22,8 @@ function Contact() {
                     <p className="line">389 – Loja 28 – Centro, Cabo Frio – RJ</p>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     )
 }

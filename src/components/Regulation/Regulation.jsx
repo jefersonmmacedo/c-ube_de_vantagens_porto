@@ -7,6 +7,8 @@ import './regulation.css'
 
 function Regulation() {
     return (
+        <div className="container">
+        <div className="content">
         <div className="regulation">
             <div className="demiliter">
                     <img src={delimiterImg} alt="delimiter" />
@@ -31,6 +33,8 @@ function Regulation() {
                 </div>
                 
             </div>
+        </div>
+        </div>
         </div>
     )
 }

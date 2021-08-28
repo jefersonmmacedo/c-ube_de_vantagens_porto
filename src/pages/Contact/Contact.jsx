@@ -9,8 +9,8 @@ function ContactPage () {
         <Contact />
         <br />
         <br />
-        <Footer />        
         </div>
+        <Footer />        
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import {toast} from 'react-toastify';
-import firebase from '../../services/firebaseConnection'
+import firebase from '../../services/firebaseConnection';
 import './newCupom.css'
 
 function NewCupom() {
@@ -10,7 +10,7 @@ function NewCupom() {
     const [cpf, setCpf] = useState('');
 
     async function handleAddCupom(e) {
-        e.preventDefault()
+        e.preventDefault();
         
         if(contract !== '' &&
             cpf !== '' &&
@@ -20,21 +20,21 @@ function NewCupom() {
             contract: contract,
             cpf: cpf,
             name:name,
-            createdAt: new Date()
+            date: new Date()
 
         }).then(() => {
             setContract('');
             setName('');
             setCpf('');
 
-            toast.success('Novo Cliente cadastrado com sucesso!')
+            toast.success('Novo cupom cadastrado com sucesso!');
         }).catch(error => {
             console.log(error)
-            toast.error('Ops. Deu algo errado')
+            toast.error('Ops. Deu algo errado');
         })
         
        } else {
-        toast.error('Preencha todos os campos corretamente')
+        toast.error('Preencha todos os campos corretamente');
        }
     }
 
@@ -42,7 +42,7 @@ function NewCupom() {
     return (
         <div className="container">
         <div className="content">
-        <div className="box">
+        <div className="box-new-cupom">
             <h1> GERAR NOVO CUPOM</h1>
             <form className="form" onSubmit={handleAddCupom}>
                 <label>Nº CONTRATO</label>
@@ -56,8 +56,8 @@ function NewCupom() {
             </form>
             
         </div>
-        <Footer />
         </div>
+        <Footer />
         </div>
     )
 }

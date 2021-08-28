@@ -8,8 +8,9 @@ import './enterprise.css'
 
 function Enterprise() {
     return (
-        <div className="company">
-
+        <div className="container">
+            <div className="content">
+            <div className="company">
             <div className="company-texts">
                 <div className="company-text-iten">
                     
@@ -88,6 +89,8 @@ function Enterprise() {
                 </div>
             </div>
 
+        </div>
+        </div>
         </div>
     )
 }

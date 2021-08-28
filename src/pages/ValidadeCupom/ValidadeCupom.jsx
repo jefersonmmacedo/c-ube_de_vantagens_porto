@@ -13,6 +13,7 @@ function ValidadeCupom() {
         const [search, setSearch] = useState('');
         const [data, setData]  = useState('');
         const [disponible, setDisponible] = useState('');
+        const [actualDate, setActualDate] = useState('')
 
 
         async function handleSearchCupom(e) {
@@ -28,7 +29,9 @@ function ValidadeCupom() {
                             setData('1');
  
                             const date = snapshot.data().date;
-                            const dateFormated = date.toDate()
+                            const dateFormated = date.toDate();
+                            const newDateFormated = ((dateFormated.getDate() )) + "/" + ((dateFormated.getMonth() + 1)) + "/" + dateFormated.getFullYear();
+                            setActualDate(newDateFormated);
                             const dateActual = new Date();
                              const timeDifference = Math.abs(dateActual.getTime() - dateFormated.getTime());
                             const datDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
@@ -63,15 +66,17 @@ function ValidadeCupom() {
        <div className="text"> <h3>SEU CUPOM APARECERÁ AQUI!</h3></div> :
        <div className={disponible}>
             <div className="contract">
-           <p>Contrato: {contract}</p>
+           <p><b>Contrato:</b> {contract} </p>
+           <p> - </p>
+           <p><b>Data de início:</b> {actualDate}</p>
             </div>
             <div className="data">
-           <p>Nome: {name}</p>
-           <p>CPF: {cpf}</p>
+           <p><b>Nome:</b> {name}</p>
+           <p><b>CPF:</b> {cpf}</p>
             </div>
             <div className="cupom">
            <p><h4>{id}</h4></p>
-           <p>Cupom {disponible}</p>
+           <p>Cupom {disponible}</p> 
             </div>
         </div>}
         </div> 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import {toast} from 'react-toastify';
 import firebase from '../../services/firebaseConnection';
+import {FiCopy} from 'react-icons/fi'
 import './searchCupom.css'
 
 function SearchCupom() {
@@ -25,10 +26,13 @@ async function handleSearchCupons(e) {
                  const timeDifference = Math.abs(dateActual.getTime() - newDate.getTime());
                 const datDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
                 let disponible;
+                let css;
                 if(datDifference <= 30) {
                     disponible = 'Disponível'
+                    css = 'verde'
                 } else {
                     disponible = 'Expirado'
+                    css = 'vermelho'
                 }
 
                //console.log(doc.data().cpf) 
@@ -38,7 +42,8 @@ async function handleSearchCupons(e) {
                     contract: doc.data().contract,
                     cpf: doc.data().cpf,
                     disponible,
-                    newDateFormated: newDateFormated
+                    newDateFormated: newDateFormated,
+                    css: css,
             })
             })
             console.log(list)
@@ -48,6 +53,11 @@ async function handleSearchCupons(e) {
                             console.log(error)
                             toast.error('Ops. Deu algo errado');
                         })
+}
+
+
+function handleCopyCode() {
+    alert('Código Copiado')
 }
     
     return (
@@ -64,16 +74,23 @@ async function handleSearchCupons(e) {
             </form>
             
         {verification.length === 0? 
-        <div><p>SEUS CUPONS APARECERAM AQUI!</p></div>: 
+        <div className="text-info"><p>VOCÊ VERÁ SEUS CUPONS AQUI!</p></div>: 
         data.map(user => {
             return (
-                <div>
-                    <p>Contrato: {user.contract}</p>
-                    <p>Nome: {user.name}</p>
-                    <p>CPF: {user.cpf}</p>
-                    <p>Cupom: {user.id}</p>
-                    <p>Seu cupom está {user.disponible}</p>
-                    <p>Data de início: {user.newDateFormated}</p>
+                <div className={user.css}>
+                    <div className="data">
+                        <div className="infos">
+                        <p><b>Contrato:</b> {user.contract}</p>
+                        <p><b>CPF:</b> {user.cpf}</p>
+                        <p><b>Data de início:</b> {user.newDateFormated}</p>
+                        </div>
+                        <div className="name">
+                        <p><b>Nome:</b> {user.name}</p>
+                        </div>
+                    <h2>{user.id}</h2>
+                    <p><b>Seu cupom está: {user.disponible}</b></p>
+                    </div>
+                        <button type="button" onClick={handleCopyCode}><FiCopy size={40}/> COPIAR CUPOM</button>
                 </div>
             )
         })

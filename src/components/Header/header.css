@@ -1,3 +1,13 @@
+  
+  .content{
+    width: 90%;
+    color: #2E4562;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  
+
 .header {
     display: flex;
     flex-direction: row;
@@ -7,8 +17,8 @@
 }
 
 .header .header-img img{
-    width: 700px;
-    margin: 0 0 0 -80px;
+    width: 750px;
+    margin: 0 0 0 -72px;
     
 }
 

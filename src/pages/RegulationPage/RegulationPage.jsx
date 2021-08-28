@@ -21,8 +21,8 @@ function RegulationPage() {
         </p>
         </div>
                 </div>
-                <Footer />
             </div>
+                <Footer />
         </div>
 
     )

@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 35px;
+    width: 100%;
 }
 
 .box h1 {

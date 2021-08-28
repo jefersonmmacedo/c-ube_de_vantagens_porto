@@ -1,15 +1,26 @@
-.footer{
-    width: 110.4%;
-    margin-left: -4.9%;
+
+
+.container{
+    width: 100%;
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .footer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #2E4562;
+ 
 }
 
 .footer .infos {
-    padding: 10px 0;
+    width: 100%;
+    padding: 10px 30px;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -7,6 +7,8 @@ import './footer.css'
 
 function Footer() {
     return (
+        <div className="container">
+
         <div className="footer">
             <div className="infos">
             <div className="footer-1">
@@ -41,6 +43,8 @@ function Footer() {
                     <img src={codingit} alt="codingit" />
                 </div>
             </div>
+        </div>
+
         </div>
     )
 }

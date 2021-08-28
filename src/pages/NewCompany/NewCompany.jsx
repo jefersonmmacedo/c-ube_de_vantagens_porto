@@ -132,8 +132,8 @@ function NewCompany() {
                     </form>
             
         </div>
-        <Footer />
         </div>
+        <Footer />
         </div>
     )
 }

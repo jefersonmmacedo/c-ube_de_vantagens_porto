@@ -7,6 +7,8 @@ import './header.css'
 
 function Header() {
     return (
+        <div className="container">
+        <div className="content">
         <div className="header">
             <div className="header-img">
             <img src={imgHeader} alt="header" />
@@ -21,6 +23,8 @@ function Header() {
                    <Link  to='/regulation'>VER REGULAMENTO COMPLETO</Link>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     )
 }

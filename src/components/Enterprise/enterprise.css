@@ -16,9 +16,13 @@
     justify-content: space-between;
 }
 .company .company-texts .company-text-iten svg {
-    margin: -50px 10px 0 0;
+    margin: -50px 20px 0 0;
 }
-.company .company-texts .company-text-iten iten-text p{}
+
+
+.company .company-texts .company-text-iten .iten-text p{
+    margin: 5px 0 20px 0;
+}
 
 .company .company-texts .company-text-iten2 {
        display: flex;
@@ -28,11 +32,9 @@
     text-align: right;
 }
 .company .company-texts .company-text-iten2 svg {
-    margin: -50px 0 0  10px;
+    margin: -50px 0 0  20px;
 }
-.company .company-texts .company-text-iten2 .iten-text h3 {
-    margin-top: 10px;
-}
+
 .company .company-texts .company-text-iten2 .iten-text p{
     margin: 5px 0 20px 0;
 }
@@ -47,7 +49,7 @@
     width:400px;
 }
 .company .title .image img {
-    width:650px;
+    width:560px;
 }
 .company .title a {
     background-color:#2E4562 ;

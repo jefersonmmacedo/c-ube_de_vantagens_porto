@@ -15,7 +15,12 @@ function ValidadeCupom() {
         const [disponible, setDisponible] = useState('');
         const [actualDate, setActualDate] = useState('')
 
-
+        // function handlePasteCode(e) {
+        //     const data = window.clipboard
+        //     const paste = document.execCommand("paste");
+        //     console.log(data)
+            
+        // }
         async function handleSearchCupom(e) {
             e.preventDefault();
             await firebase.firestore().collection('cupons')
@@ -60,6 +65,7 @@ function ValidadeCupom() {
                 <input type="text" value={search} onChange={e => setSearch(e.target.value)}/>
 
                 <button className="btn" type="submit" onClick={handleSearchCupom}>VALIDAR CUPOM</button>
+                {/* <button className="btn" type="button" onClick={handlePasteCode}>COLAR CÓDIGO</button> */}
             </form>
             
        {data.length === 0 ? 

@@ -108,19 +108,3 @@
     width: 100%;
 }
 
-.box .form-company .phone {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.box .form-company .phone .number-phone input {
-    width: 257px;
-    margin-left: 20px;
-}
-
-.box .form-company .phone .ddd-phone input{
-    width: 60px;
-}
-

@@ -14,7 +14,7 @@ function Enterprise() {
             <div className="company-texts">
                 <div className="company-text-iten">
                     
-                        <FiUsers  size={200} color='#2E4562'/>
+                        <FiUsers  size={150} color='#2E4562'/>
                     <div className="iten-text">
                         <h3>+ CLIENTES</h3>
                       <p>
@@ -25,7 +25,7 @@ function Enterprise() {
 
 
                 <div className="company-text-iten">
-                <FiTrendingUp size={200} color='#2E4562'/>
+                <FiTrendingUp size={150} color='#2E4562'/>
                 <div className="iten-text">
                 <h3>+ CLIENTES</h3>
                 <p>
@@ -36,7 +36,7 @@ function Enterprise() {
 
 
                 <div className="company-text-iten">
-                <FiThumbsUp size={200} color='#2E4562'/> 
+                <FiThumbsUp size={150} color='#2E4562'/> 
                 <div className="iten-text">
                 <h3>+ CLIENTES</h3>      
                 <p>
@@ -63,7 +63,7 @@ function Enterprise() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p> 
                     </div>
-                     <FiCoffee size={200} color='#2E4562'/>
+                     <FiCoffee size={150} color='#2E4562'/>
                 </div>
 
 
@@ -74,7 +74,7 @@ function Enterprise() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p> 
                 </div>          
-                    <FiBriefcase  size={200} color='#2E4562'/>
+                    <FiBriefcase  size={150} color='#2E4562'/>
                 </div>
 
 
@@ -85,7 +85,7 @@ function Enterprise() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     </p> 
                         </div>
-                       <FiMap  size={200} color='#2E4562'/> 
+                       <FiMap  size={150} color='#2E4562'/> 
                 </div>
             </div>
 

@@ -56,8 +56,11 @@ async function handleSearchCupons(e) {
 }
 
 
-function handleCopyCode() {
-    alert('Código Copiado')
+function handleCopyCode(code) {
+    navigator.clipboard.writeText(code);
+    navigator.clipboard.readText().then((code)=> {
+        toast.success('Código de cupom copiado: ' + code);
+    });
 }
     
     return (
@@ -90,7 +93,7 @@ function handleCopyCode() {
                     <h2>{user.id}</h2>
                     <p><b>Seu cupom está: {user.disponible}</b></p>
                     </div>
-                        <button type="button" onClick={handleCopyCode}><FiCopy size={40}/> COPIAR CUPOM</button>
+                        <button type="button" onClick={() => handleCopyCode(user.id)}><FiCopy size={40}/> COPIAR CUPOM</button>
                 </div>
             )
         })

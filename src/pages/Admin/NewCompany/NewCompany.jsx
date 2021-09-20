@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../../components/Footer/Footer';
 import {toast} from 'react-toastify';
-import firebase from '../../services/firebaseConnection';
-import avatarLogo from '../../assets/images/avatar.svg';
-import {FiUpload} from 'react-icons/fi'
-import './newCompany.css'
+import firebase from '../../../services/firebaseConnection';
+import avatarLogo from '../../../assets/images/avatar.svg';
+import {FiUpload} from 'react-icons/fi';
+import TopBar from '../../../components/TopBar/TopBar';
+import './newCompany.css';
 
 function NewCompany() {
-    const [cnpj, setCpnj] = useState('');
     const [companyName, setCompanyName] = useState('');
-    const [fantasyName, setFantasyName] = useState('');
     const [road, setRoad] = useState('');
     const [number, setNumber] = useState('');
-    const [ddd, setDdd] = useState('');
     const [complement, setComplement] = useState('');
     const [reference, setReference] = useState('');
     const [district, setDistrict] = useState('');
@@ -20,11 +18,18 @@ function NewCompany() {
     const [uf, setUf] = useState('');
     const [code, setCode] = useState('');
     const [email, setEmail] = useState('');
+    const [ddd2, setDdd2] = useState('');
+    const [phone2, setPhone2] = useState('');
+    const [ddd, setDdd] = useState('');
     const [phone, setPhone] = useState('');
+    const [instagram, setInstagram] = useState('');
+    const [facebook, setFacebook] = useState('');
     const [percentage, setPercentage] = useState('');
     const [segment, setSegment] = useState('Selecione');
     const [avatarUrl, setAvatarUrl] = useState(null);
     const [imageAvatar, setImageAvatar] = useState('');
+    const [description, setDescription] = useState('');
+    
 
  
  
@@ -49,12 +54,9 @@ function NewCompany() {
         e.preventDefault();
 
         if(
-            cnpj !== '' &&
             companyName !== '' &&
-            fantasyName !== '' &&
             road !== '' &&
             number !== '' &&
-            ddd !== '' &&
             complement !== '' &&
             reference !== '' &&
             district !== '' &&
@@ -64,8 +66,10 @@ function NewCompany() {
             percentage !== '' &&
             segment !== '' &&
             email !== '' &&
+            ddd !== '' &&
             phone !== '' &&
-            imageAvatar !== ''
+            imageAvatar !== '' &&
+            description !== ''
          ) {
 
         const uploadTask = await firebase.storage()
@@ -81,12 +85,9 @@ function NewCompany() {
 
                             await firebase.firestore().collection('company')
                                 .add({
-                                    cnpj:cnpj,
                                     companyName:companyName,
-                                    fantasyName:fantasyName,
                                     road: road,
                                     number:number,
-                                    ddd:ddd,
                                     complement: complement,
                                     reference: reference,
                                     district:district,
@@ -94,17 +95,22 @@ function NewCompany() {
                                     uf:uf,
                                     code:code,
                                     email:email,
+                                    ddd:ddd,
                                     phone:phone,
+                                    ddd2:ddd2,
+                                    phone2:phone2,
+                                    instagram:instagram,
+                                    facebook:facebook,
                                     segment:segment,
                                     percentage:percentage,
+                                    description:percentage,
                                     avatarUrl: urlImage
                                 }).then(() => {
-                                    setCpnj('');
+                                    setInstagram('');
                                     setCompanyName('');
-                                    setFantasyName('');
+                                    setFacebook('');
                                     setRoad('');
                                     setNumber('');
-                                    setDdd('');
                                     setComplement('');
                                     setDistrict('');
                                     setReference('');
@@ -112,10 +118,14 @@ function NewCompany() {
                                     setUf('');
                                     setCode('');
                                     setEmail('');
+                                    setDdd('');
                                     setPhone('');
+                                    setDdd2('');
+                                    setPhone2('');
                                     setPercentage('');
                                     setSegment('');
                                     setAvatarUrl(null);
+                                    setDescription(null);
                         
                                     toast.success('Novo parceiro cadastrado com sucesso!')
                                 }).catch(error => {
@@ -148,6 +158,7 @@ function NewCompany() {
     return (
         <div className="container">
         <div className="content">
+            <TopBar />
         <div className="box">
             <h1> CADASTRO DE PARCEIROS</h1>
             <form className="form-company" onSubmit={handleAddCompany}>
@@ -162,24 +173,39 @@ function NewCompany() {
                 <div className="company-data">
                         <span>Dados Empresa</span>
                        
-                            <label>CNPJ: </label>
-                            <input type="number" value={cnpj} onChange={(e) => setCpnj(e.target.value)} />
-                            <label>Razão Social: </label>
-                            <input type="text" value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
-                            <label>Nome Fantasia: </label>
-                            <input type="text" value={fantasyName}  onChange={(e) => setFantasyName(e.target.value)}/>
+                             <label>Empresa: </label>
+                            <input type="text" value={companyName}  onChange={(e) => setCompanyName(e.target.value)}/>
 
                             <span>Dados Contato</span>
                       
                             <label>Email: </label>
                             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                            <label>Telefone: </label>
+                            <label>Telefone/Whatsapp: </label>
                             <div className="phone">
                                 <div className="ddd-phone">
                             <input type="number" value={ddd} onChange={(e) => setDdd(e.target.value)} />
                                 </div>
                                 <div className="number-phone">
                             <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                            </div>
+                            </div>
+                            <label>Telefone/Whatsapp: </label>
+                            <div className="phone">
+                                <div className="ddd-phone">
+                            <input type="number" value={ddd2} onChange={(e) => setDdd(e.target.value)} />
+                                </div>
+                                <div className="number-phone">
+                            <input type="number" value={phone2} onChange={(e) => setPhone(e.target.value)} />
+                            </div>
+                            </div>
+
+                            <label>Redes sociais: </label>
+                            <div className="redes-sociais">
+                                <div className="instagram">
+                            <input type="text" value={instagram} placeholder="Instagram" onChange={(e) => setInstagram(e.target.value)} />
+                                </div>
+                                <div className="facebook">
+                            <input type="text" value={facebook} placeholder="Facebook" onChange={(e) => setFacebook(e.target.value)} />
                             </div>
                             </div>
                             
@@ -190,6 +216,7 @@ function NewCompany() {
                             <select value={segment} onChange={handleSelectSegment}>
                                 <option value="Selecione">Selecione</option>
                                 <option value="Hoteis e Pousadas">Hoteis e Pousadas</option>
+                                <option value="Agência de viagens">Agência de viagens</option>
                                 <option value="Restairantes e Fast Foods">Restairantes e Fast Foods</option>
                                 <option value="Padarias e Supermercados">Padarias e Supermercados</option>
                                 <option value="Loja de roupas, sapatos e biquinis">Loja de roupas, sapatos e biquinis</option>
@@ -203,6 +230,8 @@ function NewCompany() {
                         
                             <label>% de desconto: </label>
                             <input type="number" value={percentage} onChange={(e) => setPercentage(e.target.value)} />
+                            <label>Descrição do desconto: </label>
+                            <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
 
                 </div>
 

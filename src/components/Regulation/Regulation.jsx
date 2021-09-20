@@ -17,10 +17,9 @@ function Regulation() {
                 <div className="text-itens-regulation">
                     <img src={regulationImg} alt="regulation" />
                     <div className="text-regulation">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p>Para participar do programa basta alugar um veículo com a Porto Rent a Car.
+                        Você ganhará o benefício de 1 Cupom de desconto que terá validade de 30
+                        dias para usar em qualquer uma de nossas empresas parceiras. </p>
                     <div className="buttons-regulation">
                             <Link className="btn-regulation"  to='/regulation'>VER REGULAMENTO COMPLETO</Link>
                             <Link className="btn-regulation-2" to='/companies'>ONDE USAR MEUS CUPONS?</Link>

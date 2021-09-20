@@ -70,20 +70,19 @@ function ValidadeCupom() {
             
        {data.length === 0 ? 
        <div className="text"> <h3>SEU CUPOM APARECERÁ AQUI!</h3></div> :
-       <div className={disponible}>
-            <div className="contract">
-           <p><b>Contrato:</b> {contract} </p>
-           <p> - </p>
-           <p><b>Data de início:</b> {actualDate}</p>
-            </div>
+       <div className={disponible === "Disponível" ? "verde" : "vermelho" }>
             <div className="data">
-           <p><b>Nome:</b> {name}</p>
-           <p><b>CPF:</b> {cpf}</p>
-            </div>
-            <div className="cupom">
-           <p><h4>{id}</h4></p>
-           <p>Cupom {disponible}</p> 
-            </div>
+                        <div className="infos">
+                        <p><b>Contrato:</b>{contract} - {disponible}</p>
+                        <p><b>CPF:</b> {cpf}</p>
+                        <p><b>Data de início:</b> {actualDate}</p>
+                        </div>
+                        <div className="name">
+                        <p><b>Nome:</b> {name}</p>
+                        </div>
+                        <h2>{id}</h2>
+                        <b> Seu cupom está: {disponible} </b>
+                    </div>        
         </div>}
         </div> 
         </div>

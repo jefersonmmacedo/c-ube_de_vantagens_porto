@@ -1,5 +1,6 @@
 import {Route, Redirect} from 'react-router-dom';
-import React, {useState } from 'react';
+import React, {useContext } from 'react';
+import {AuthContext} from '../contexts/Auth'
 
 function RouteWrapper({
     component: Component,
@@ -7,12 +8,9 @@ function RouteWrapper({
     ...rest
 }){
 
-const [loading, setLoading] = useState(false);
-const [signed, setSigned] = useState(true)
-
+    const {signed, loading} = useContext(AuthContext)
+ 
 if(loading) {
-    setLoading(false);
-    setSigned(true);
     return (
         <div>  
             <h1>Carregando a página</h1>
@@ -20,13 +18,13 @@ if(loading) {
     )
 }
 
-if(!signed && isPrivate) {
-    return <Redirect to="/" />
-}
+// if(!signed && isPrivate) {
+//     return <Redirect to="/" />
+// }
 
-if(!signed && !isPrivate) {
-    return <Redirect to="/" />
-}
+// if(signed && !isPrivate) {
+//     return <Redirect to="/dashboard" />
+// }
 
 return (
     <Route

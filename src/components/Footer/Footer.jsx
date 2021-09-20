@@ -16,20 +16,20 @@ function Footer() {
             <p>MAIS BENEFÍCIOS PARA NOSSOS CLIENTES</p>
             </div>
             <div className="footer-2">
-                <h3>NAVEGAÇÃO</h3>
+                <h4>NAVEGAÇÃO</h4>
                 <Link to='/regulation'>REGULAMENTO</Link>
-                <Link to='/companies'>ONDE USAR?</Link>
-                <Link to='/partners'>SEJA UM PARCEIRO</Link>
+                <Link to='/PrivacyPolicy'>POLÍTICA DE PRIVACIDADE</Link>
+                <Link to='/TermsOfUse'>TERMOS DE USO</Link>
                 <Link to='/contact'>FALE CONOSCO</Link>
             </div>
             <div className="footer-3">
-                <h3>CUPONS</h3>
+                <h4>CUPONS</h4>
                 <Link className="btn-footer" to='/searchcupom'>VER MEUS CUPONS</Link>
                 <Link className="btn-footer" to='/validatecupom'>VALIDAR CUPONS</Link>
 
             </div>
             <div className="footer-4">
-            <h3>FALE CONOSCO</h3>
+            <h4>FALE CONOSCO</h4>
             <p>< FiPhoneCall /> 22 3031-4272</p>
                     <p>< FiMail /> reservas@portorentacar.com.br</p>
                     <p>< FiMapPin /> Shopping Ipanema Mall - Rua Raul Veiga,</p>

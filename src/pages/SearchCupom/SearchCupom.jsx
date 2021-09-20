@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import {useParams, useHistory} from 'react-router-dom'
 import Footer from '../../components/Footer/Footer';
 import {toast} from 'react-toastify';
 import firebase from '../../services/firebaseConnection';
-import {FiCopy} from 'react-icons/fi'
+import {FiCopy, FiCheckCircle} from 'react-icons/fi'
 import './searchCupom.css'
 
 function SearchCupom() {
-
+        const history = useHistory()
         const [cpf, setCpf] = useState('');
         const [data, setData] = useState([]);
         const [verification, setVerification] = useState('');
+        const {id} = useParams()
 
 async function handleSearchCupons(e) {
     e.preventDefault();
@@ -62,13 +64,17 @@ function handleCopyCode(code) {
         toast.success('Código de cupom copiado: ' + code);
     });
 }
+
+function handleRedirect() {
+    history.push("/validatecupom")
+}
     
     return (
         <div className="container">
         <div className="content">
         <div className="box">
             <br/> <br/> <br/> <br/>
-            <h1> VER MEUS CUPONS</h1>
+            <h1> VER MEUS CUPONS {id}</h1>
             <form className="form">
                 <label>CPF (Apenas números)</label>
                 <input type="text" value={cpf} onChange={e => setCpf(e.target.value) }/>
@@ -90,13 +96,15 @@ function handleCopyCode(code) {
                         <div className="name">
                         <p><b>Nome:</b> {user.name}</p>
                         </div>
-                    <h2>{user.id}</h2>
-                    <p><b>Seu cupom está: {user.disponible}</b></p>
+                        <h2>{user.id}</h2>
                     </div>
-                        <button type="button" onClick={() => handleCopyCode(user.id)}><FiCopy size={40}/> COPIAR CUPOM</button>
+                    <div className="buttons">
+                        <button type="button" onClick={() => handleCopyCode(user.id)}><FiCopy size={20}/> COPIAR CUPOM</button>
+                        <button type="button" onClick={handleRedirect} >< FiCheckCircle size={20} />VALIDAR CUPOM</button>
+                    </div>
                 </div>
             )
-        })
+        })        
         
         }
         

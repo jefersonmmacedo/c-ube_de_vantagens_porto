@@ -48,6 +48,7 @@
     color:#2E4562 ;
     font-weight: 700;
     width: 80%;
+    background-color: #fff;
   }
 
   .box .form-company .label-avatar{
@@ -124,3 +125,19 @@
     width: 60px;
 }
 
+.box .form-company .redes-sociais{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.box .form-company .company-data .redes-sociais .instagram input {
+    width: 157px;
+}
+
+.box .form-company .company-data .redes-sociais .facebook input {
+    margin-left: 20px;
+    width: 157px;
+}

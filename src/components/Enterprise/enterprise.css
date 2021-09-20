@@ -1,62 +1,63 @@
 .company {
-    margin-top: -20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: -150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .company .company-texts {
-    width: 350px;
-    margin-top: 200px;
+  width: 320px;
+  margin-top: 150px;
 }
 .company .company-texts .company-text-iten {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .company .company-texts .company-text-iten svg {
-    margin: -50px 20px 0 0;
+  margin: -80px 20px 0 0;
 }
 
-
-.company .company-texts .company-text-iten .iten-text p{
-    margin: 5px 0 20px 0;
+.company .company-texts .company-text-iten .iten-text p {
+  margin: 5px 0 20px 0;
+  font-size: 14px;
 }
 
 .company .company-texts .company-text-iten2 {
-       display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
 }
 .company .company-texts .company-text-iten2 svg {
-    margin: -50px 0 0  20px;
+  margin: -80px 0 0 20px;
 }
 
-.company .company-texts .company-text-iten2 .iten-text p{
-    margin: 5px 0 20px 0;
+.company .company-texts .company-text-iten2 .iten-text p {
+  margin: 5px 0 20px 0;
+  font-size: 14px;
 }
 
 .company .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .company .title img {
-    width:400px;
+  width: 325px;
 }
 .company .title .image img {
-    width:560px;
+  width: 560px;
 }
 .company .title a {
-    background-color:#2E4562 ;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 30px;
+  background-color: #2e4562;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 30px;
 }

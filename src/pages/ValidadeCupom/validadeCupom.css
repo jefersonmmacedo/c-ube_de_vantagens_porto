@@ -47,135 +47,141 @@ input, textarea, select {
     width: 70%;
   }
 
-  .box .Disponível {
-      background-color:#fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      margin: 30px 0;
-      padding: 5px;
-      width: 70%;
-      background-color: rgb(240, 240, 240);
-      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-
-  
-  .box .Disponível .contract {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      padding: 5px 0 5px 0;
-      border-bottom: 1px solid rgb(174, 174, 174);
-      width: 60%;
-  }
-
-  .box .Disponível .data {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      padding: 5px;
-  }
-
-  .box .Disponível .data p {
-    margin-right: 20px;
-  }
-
-  .box .Disponível .cupom {
+  .box .verde{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 50px;
-      padding: 5px;
-
-  }
-
-  .box .text h3{
-      margin: 100px 0;
-  }
-
-  .box .Disponível .cupom h4 {
-    font-size: 50px;
-    padding: 5px;
-    color: #fff;
-    background-color: #008000;
-    padding: 5px 15px;
+    justify-content: space-between;
     border-radius: 8px;
-    text-align: center;
-  }
-
-  .box .Disponível .cupom p {
-    font-size: 25px;
-    padding: 0 0 5px 0;
-    color: #008000;
-  }
-
-
-.box .Expirado {
-    background-color:#fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    margin: 30px 0;
-    padding: 5px;
+    margin: 30px 0 0 0;
+    padding: 10px;
     width: 70%;
     background-color: rgb(240, 240, 240);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-
-.box .Expirado .contract {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    padding: 5px 0 0 0;
-
-}
-
-.box .Expirado .data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.box .Expirado .data p {
-  margin-right: 20px;
-}
-
-.box .Expirado .cupom {
+.box .verde .data{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.box .verde .data h2 {
+    font-size: 30px;
     padding: 5px;
-
-}
-
-.box .Expirado .cupom h4 {
-  font-size: 50px;
-  padding: 5px;
   color: #fff;
-    background-color: #8B0000;
-    padding: 5px 15px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: line-through;
+  background-color: #008000;
+  padding: 5px 15px;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.box .Expirado .cupom p {
-  font-size: 25px;
-  padding: 0 0 5px 0;
-  color: #8B0000;
+.box .verde .data p {
+ color: #008000;  
+}
+
+.box .verde .data .infos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #2E4562;
+}
+
+.box .verde .data .infos p{
+  color: #2E4562;
+  padding-bottom: 5px;
+}
+
+.box .verde .data .infos p {
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+
+.box .verde .data .name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.box .verde .data .name p {
+    font-size: 20px;
+    color: #2E4562;
+    padding-bottom: 5px;
+}
+
+
+
+
+.box .vermelho{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 30px 0 0 0;
+  padding: 10px;
+  width: 70%;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.box .vermelho .data{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+
+.box .vermelho .data h2 {
+  font-size: 30px;
+  padding: 5px;
+color: #fff;
+background-color: #8B0000;
+text-decoration: line-through;
+padding: 5px 15px;
+margin-bottom: 5px;
+border-radius: 8px;
+text-align: center;
+}
+
+.box .vermelho .data p {
+color: #8B0000;  
+padding-bottom: 5px;
+}
+
+.box .vermelho .data .infos{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+color: #2E4562;
+}
+
+.box .vermelho .data .infos p{
+color: #2E4562;
+padding-bottom: 5px;
+}
+
+.box .vermelho .data .infos p {
+margin-right: 20px;
+padding-bottom: 5px;
+}
+
+.box .vermelho .data .name{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+}
+
+.box .vermelho .data .name p {
+  font-size: 20px;
+  color: #2E4562;
+  padding-bottom: 5px;
 }

@@ -1,8 +1,9 @@
 import React,{ useState } from 'react';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../../components/Footer/Footer';
 import {toast} from 'react-toastify';
-import firebase from '../../services/firebaseConnection';
-import './newCupom.css'
+import firebase from '../../../services/firebaseConnection';
+import TopBar from '../../../components/TopBar/TopBar';
+import './newCupom.css';
 
 function NewCupom() {
     const [contract, setContract] = useState('');
@@ -42,6 +43,7 @@ function NewCupom() {
     return (
         <div className="container">
         <div className="content">
+            <TopBar />
         <div className="box-new-cupom">
             <h1> GERAR NOVO CUPOM</h1>
             <form className="form" onSubmit={handleAddCupom}>

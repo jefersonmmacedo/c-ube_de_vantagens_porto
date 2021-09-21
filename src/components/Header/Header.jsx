@@ -6,10 +6,6 @@ import './header.css'
 
 function Header() {
 
-    function handleRedirect() {
-       console.log('Olá')
-    }
-
     return (
         <div className="container">
         <div className="content">

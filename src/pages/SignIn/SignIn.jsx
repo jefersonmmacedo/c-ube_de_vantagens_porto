@@ -8,7 +8,7 @@ function SignIn() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {signIn, loadingAuth} = useContext(AuthContext)
+    const {signIn} = useContext(AuthContext)
 
     function handleLogin(e) {
         e.preventDefault()

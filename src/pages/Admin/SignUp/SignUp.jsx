@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Footer from '../../../components/Footer/Footer';
-import TopBar from '../../../components/TopBar/TopBar';
 import {toast} from'react-toastify';
+import Navbar2 from '../../../components/NavbarAdmin/index';
 import './signUp.css'
 import { AuthContext } from '../../../contexts/Auth';
 
@@ -11,7 +11,7 @@ function SignUp() {
     const [password, setPassword] = useState('');
 
 
-    const {signUp, loadingAuth} = useContext(AuthContext);
+    const {signUp} = useContext(AuthContext);
 
 
     function handleSignUp(e) {
@@ -26,8 +26,8 @@ function SignUp() {
 
     return (
         <div className="container">
+             <Navbar2 />
         <div className="content">
-            <TopBar />
         <div className="box">
             <h1> CADASTRO DE USUÁRIO</h1>
             <form className="form" onClick={handleSignUp}>

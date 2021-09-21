@@ -1,66 +1,57 @@
 .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 55px;
-    margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px;
+  margin: 30px 0;
 }
 
 .box h1 {
-    margin-bottom: 20px ;
+  margin-bottom: 20px;
 }
 
 .box .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 10px;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  width: 70%;
 }
 
 .box .form label {
-    margin: 20px 0 5px 0;
+  margin: 20px 0 5px 0;
 }
 
-.box .form button {
-    width: 30%;
-    padding: 10px;
-    font-weight: 700;
-    margin: 20px 0 20px 0;
-    border: none;
-    border-radius: 8px;
-    background-color:#2E4562;
-    color: #fff;
+input,
+textarea,
+select {
+  border: 1px solid #2e4562;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #2e4562;
+  font-weight: 700;
+  width: 70%;
 }
 
-input, textarea, select {
-    border: 1px solid #2E4562;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 16px;
-    color:#2E4562 ;
-    font-weight: 700;
-    width: 70%;
-  }
-
-  .box .verde{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 8px;
-    margin: 30px 0 0 0;
-    padding: 10px;
-    width: 70%;
-    background-color: rgb(240, 240, 240);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+.box .verde {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 30px 0 0 0;
+  padding: 10px;
+  width: 70%;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.box .verde .data{
+.box .verde .data {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,8 +61,8 @@ input, textarea, select {
 }
 
 .box .verde .data h2 {
-    font-size: 30px;
-    padding: 5px;
+  font-size: 30px;
+  padding: 5px;
   color: #fff;
   background-color: #008000;
   padding: 5px 15px;
@@ -80,19 +71,19 @@ input, textarea, select {
 }
 
 .box .verde .data p {
- color: #008000;  
+  color: #008000;
 }
 
-.box .verde .data .infos{
+.box .verde .data .infos {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: #2E4562;
+  color: #2e4562;
 }
 
-.box .verde .data .infos p{
-  color: #2E4562;
+.box .verde .data .infos p {
+  color: #2e4562;
   padding-bottom: 5px;
 }
 
@@ -101,7 +92,7 @@ input, textarea, select {
   padding-bottom: 5px;
 }
 
-.box .verde .data .name{
+.box .verde .data .name {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -109,15 +100,40 @@ input, textarea, select {
 }
 
 .box .verde .data .name p {
-    font-size: 20px;
-    color: #2E4562;
-    padding-bottom: 5px;
+  font-size: 20px;
+  color: #2e4562;
+  padding-bottom: 5px;
 }
 
+.box .form .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
 
+.box .form .buttons button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #2e4562;
+  width: 200px;
+  height: 60px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px;
+}
 
+.box .form .buttons button svg {
+  margin-right: 10px;
+}
 
-.box .vermelho{
+.box .vermelho {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -130,58 +146,58 @@ input, textarea, select {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.box .vermelho .data{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
+.box .vermelho .data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .box .vermelho .data h2 {
   font-size: 30px;
   padding: 5px;
-color: #fff;
-background-color: #8B0000;
-text-decoration: line-through;
-padding: 5px 15px;
-margin-bottom: 5px;
-border-radius: 8px;
-text-align: center;
+  color: #fff;
+  background-color: #8b0000;
+  text-decoration: line-through;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .box .vermelho .data p {
-color: #8B0000;  
-padding-bottom: 5px;
+  color: #8b0000;
+  padding-bottom: 5px;
 }
 
-.box .vermelho .data .infos{
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-justify-content: center;
-color: #2E4562;
-}
-
-.box .vermelho .data .infos p{
-color: #2E4562;
-padding-bottom: 5px;
+.box .vermelho .data .infos {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  color: #2e4562;
 }
 
 .box .vermelho .data .infos p {
-margin-right: 20px;
-padding-bottom: 5px;
+  color: #2e4562;
+  padding-bottom: 5px;
 }
 
-.box .vermelho .data .name{
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-justify-content: center;
+.box .vermelho .data .infos p {
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+
+.box .vermelho .data .name {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .box .vermelho .data .name p {
   font-size: 20px;
-  color: #2E4562;
+  color: #2e4562;
   padding-bottom: 5px;
 }

@@ -4,7 +4,7 @@ import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
 import avatarLogo from '../../../assets/images/avatar.svg';
 import {FiUpload} from 'react-icons/fi';
-import TopBar from '../../../components/TopBar/TopBar';
+import Navbar2 from '../../../components/NavbarAdmin/index';
 import './newCompany.css';
 
 function NewCompany() {
@@ -157,8 +157,8 @@ function NewCompany() {
 
     return (
         <div className="container">
+             <Navbar2 />
         <div className="content">
-            <TopBar />
         <div className="box">
             <h1> CADASTRO DE PARCEIROS</h1>
             <form className="form-company" onSubmit={handleAddCompany}>

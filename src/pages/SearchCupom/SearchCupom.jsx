@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {useParams, useHistory} from 'react-router-dom'
 import Footer from '../../components/Footer/Footer';
 import {toast} from 'react-toastify';
 import firebase from '../../services/firebaseConnection';
 import {FiCopy, FiCheckCircle} from 'react-icons/fi'
 import './searchCupom.css'
-import { useContext } from 'react-bootstrap/node_modules/@types/react';
 import { AuthContext } from '../../contexts/Auth';
 
 function SearchCupom() {
@@ -62,7 +61,8 @@ async function handleSearchCupons(e) {
 
 
 function handleCopyCode(code) {
-    copiCode(code)
+    copiCode(code);
+      toast.success(`Código copiado com sucesso: ${code}`)
 }
 
 function handleRedirect() {

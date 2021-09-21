@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Footer from '../../components/Footer/Footer';
 import {toast} from 'react-toastify';
 import firebase from '../../services/firebaseConnection';
 import './validadeCupom.css';
+import { AuthContext } from '../../contexts/Auth';
+import {FiClipboard, FiCheckCircle} from 'react-icons/fi'
 
 
 function ValidadeCupom() {
+        const {cupom} = useContext(AuthContext)
         const [name, setName] = useState('');
         const [contract, setContract] = useState('');
         const [cpf, setCpf] = useState('');
@@ -55,6 +58,11 @@ function ValidadeCupom() {
 
         }
 
+        function handlePasteCode() {
+            setSearch(cupom);
+             toast.success(`Código colado com sucesso: ${cupom}`)
+        }
+
     return (
         <div className="container">
         <div className="content">
@@ -63,9 +71,10 @@ function ValidadeCupom() {
             <form className="form" >
                 <label>CÓDIGO DO CUPOM</label>
                 <input type="text" value={search} onChange={e => setSearch(e.target.value)}/>
-
-                <button className="btn" type="submit" onClick={handleSearchCupom}>VALIDAR CUPOM</button>
-                {/* <button className="btn" type="button" onClick={handlePasteCode}>COLAR CÓDIGO</button> */}
+                 <div className="buttons">
+               <button className="btn" type="button" onClick={handlePasteCode}><FiClipboard />COLAR CÓDIGO</button>
+                <button className="btn" type="submit" onClick={handleSearchCupom}><FiCheckCircle/>VALIDAR CUPOM</button>
+               </div> 
             </form>
             
        {data.length === 0 ? 
@@ -73,7 +82,7 @@ function ValidadeCupom() {
        <div className={disponible === "Disponível" ? "verde" : "vermelho" }>
             <div className="data">
                         <div className="infos">
-                        <p><b>Contrato:</b>{contract} - {disponible}</p>
+                        <p><b>Contrato:</b> {contract}</p>
                         <p><b>CPF:</b> {cpf}</p>
                         <p><b>Data de início:</b> {actualDate}</p>
                         </div>

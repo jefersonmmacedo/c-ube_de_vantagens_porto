@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import TopBar from '../../../components/TopBar/TopBar';
 import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
 import { AuthContext } from '../../../contexts/Auth';
+import Navbar2 from '../../../components/NavbarAdmin/index';
 import './dashboard.css'
 
 function Dashboard() {
@@ -79,8 +79,8 @@ function Dashboard() {
 
     return (
         <div className="container">
+             <Navbar2 />
         <div className="content">
-        <TopBar />
 
         <div className="dashboard">
             <div className="header">

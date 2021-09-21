@@ -4,12 +4,10 @@ import {
   Nav,
   NavLink,
   Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink
+  NavMenu
 } from './NavbarElements';
 
-const Navbar = () => {
+const NavbarAdmin = () => {
   return (
     <div className="container">
       <Nav>
@@ -30,16 +28,13 @@ const Navbar = () => {
           <NavLink to='/admin/users' activeStyle>
             Usuários
           </NavLink>
-          <NavBtn>
-            <NavBtnLink to='/searchcupom'>X Sair</NavBtnLink>
-         </NavBtn>
         </NavMenu>
       </Nav>
     </div>
   );
 };
 
-export default Navbar;
+export default NavbarAdmin;
 
 
     

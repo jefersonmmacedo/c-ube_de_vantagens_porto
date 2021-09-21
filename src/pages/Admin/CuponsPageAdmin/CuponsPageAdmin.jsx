@@ -1,14 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import TopBar from '../../../components/TopBar/TopBar';
+import React, { useEffect, useState } from 'react';
 import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
-import { AuthContext } from '../../../contexts/Auth';
+import Navbar2 from '../../../components/NavbarAdmin/index';
 import './cuponsPageAdmin.css'
 
 function CuponsPageAdmin() {
     const [cupons, setCupons] = useState([]);
-    const {user, signOut} = useContext(AuthContext);
-
     
     useEffect(() => {
         //CARREGANDO OS CUPONS
@@ -45,8 +42,8 @@ function CuponsPageAdmin() {
 
     return (
         <div className="container">
+             <Navbar2 />
         <div className="content">
-            <TopBar />
         <div className="dashboard-data">
         <div className="data-cupons">
                 <h3>ULTIMOS CUPONS GERADOS</h3>

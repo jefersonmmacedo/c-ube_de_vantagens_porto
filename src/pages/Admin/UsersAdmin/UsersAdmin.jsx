@@ -1,14 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import TopBar from '../../../components/TopBar/TopBar';
+import React, { useEffect, useState } from 'react';
 import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
-import { AuthContext } from '../../../contexts/Auth';
+import Navbar2 from '../../../components/NavbarAdmin/index';
 import './userAdmin.css'
 
 function UsersAdmin() {
     const [users, setUsers] = useState([]);
-    const {user, signOut} = useContext(AuthContext);
-
     
     useEffect(() => {
         //CARREGANDO OS CUPONS
@@ -53,8 +50,8 @@ function UsersAdmin() {
 
     return (
         <div className="container">
+             <Navbar2 />
         <div className="content">
-            <TopBar />
         <div className="dashboard-data">
         <div className="data-cupons">
                 <h3>USUÁRIOS CADASTRADOS</h3>

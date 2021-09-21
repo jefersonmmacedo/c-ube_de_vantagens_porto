@@ -8,7 +8,7 @@ function RouteWrapper({
     ...rest
 }){
 
-    const {signed, loading} = useContext(AuthContext)
+    const {signed,loading} = useContext(AuthContext)
  
 if(loading) {
     return (
@@ -18,13 +18,13 @@ if(loading) {
     )
 }
 
-// if(!signed && isPrivate) {
-//     return <Redirect to="/" />
-// }
+if(!signed && isPrivate) {
+    return <Redirect to="/" />
+}
 
-// if(signed && !isPrivate) {
-//     return <Redirect to="/dashboard" />
-// }
+if(signed && !isPrivate) {
+    return <Redirect to="/Admin/dashboard" />
+}
 
 return (
     <Route

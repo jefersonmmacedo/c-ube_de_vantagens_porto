@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import Footer from '../../../components/Footer/Footer';
 import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
-import TopBar from '../../../components/TopBar/TopBar';
+import Navbar2 from '../../../components/NavbarAdmin/index';
 import './newCupom.css';
 
 function NewCupom() {
@@ -42,8 +42,8 @@ function NewCupom() {
 
     return (
         <div className="container">
+             <Navbar2 />
         <div className="content">
-            <TopBar />
         <div className="box-new-cupom">
             <h1> GERAR NOVO CUPOM</h1>
             <form className="form" onSubmit={handleAddCupom}>

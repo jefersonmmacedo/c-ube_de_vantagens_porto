@@ -1,15 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import TopBar from '../../../components/TopBar/TopBar';
+import React, { useEffect, useState } from 'react';
 import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
-import { AuthContext } from '../../../contexts/Auth';
-import './companiesPageAdmin.css'
+import Navbar2 from '../../../components/NavbarAdmin/index';
+import './companiesPageAdmin.css';
 
 function CompanyPageAdmin() {
     const [data, setData] = useState([]);
- //   const {user, signOut} = useContext(AuthContext);
-
-
     
     useEffect(() => {
         async function loadCompanies() {
@@ -49,8 +45,8 @@ function CompanyPageAdmin() {
 
     return (
         <div className="container">
+            <Navbar2 />
         <div className="content">
-            <TopBar />
         <div className="dashboard-data">
                         <div className="data-company">
             <h3>PARCEIROS CADASTRADOS</h3>

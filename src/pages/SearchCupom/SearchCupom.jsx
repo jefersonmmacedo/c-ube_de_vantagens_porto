@@ -5,8 +5,11 @@ import {toast} from 'react-toastify';
 import firebase from '../../services/firebaseConnection';
 import {FiCopy, FiCheckCircle} from 'react-icons/fi'
 import './searchCupom.css'
+import { useContext } from 'react-bootstrap/node_modules/@types/react';
+import { AuthContext } from '../../contexts/Auth';
 
 function SearchCupom() {
+        const {copiCode} = useContext(AuthContext)
         const history = useHistory()
         const [cpf, setCpf] = useState('');
         const [data, setData] = useState([]);
@@ -59,10 +62,7 @@ async function handleSearchCupons(e) {
 
 
 function handleCopyCode(code) {
-    navigator.clipboard.writeText(code);
-    navigator.clipboard.readText().then((code)=> {
-        toast.success('Código de cupom copiado: ' + code);
-    });
+    copiCode(code)
 }
 
 function handleRedirect() {

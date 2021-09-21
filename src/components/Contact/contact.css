@@ -1,47 +1,46 @@
-
-
 .contact {
-margin: 50px 0 50px 0;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
+  margin: 50px 0 50px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact .map {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact .map img{
-width: 500px;
+.contact .map img {
+  width: 500px;
 }
 
 .contact .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px;
 }
 
 .contact .contact-info img {
-    width: 400px;
-    margin-bottom: 50px;
+  width: 400px;
+  margin-bottom: 50px;
 }
 
 .contact .contact-info .infos .line {
-    margin-top: -10px;
-    margin-left: 28px;
+  margin-top: -10px;
+  margin-left: 28px;
 }
 
 .contact .contact-info .infos p {
-    font-size: 18px;
-    padding: 5px 0;
-    font-weight: 700;
+  font-size: 18px;
+  padding: 5px 0;
+  font-weight: 700;
 }
 
 .contact .contact-info .infos svg {
-    margin-right: 5px;
+  margin-right: 5px;
 }

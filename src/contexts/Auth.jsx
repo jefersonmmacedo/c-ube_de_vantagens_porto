@@ -8,6 +8,7 @@ function AuthProvider({children}) {
     const [user, setUser] = useState(null)
     const [loadingAuth, setLoadingAuth] = useState(false)
     const [loading, setLoading] = useState(null)
+    const [cupom, setCupom] = useState('')
     
     useEffect(() => {
         function loadStorage() {
@@ -94,6 +95,11 @@ function AuthProvider({children}) {
         setUser(null)
     }
 
+    function copiCode(code) {
+        setCupom(code)
+        console.log(code);
+    }
+
     return (
         <AuthContext.Provider    
         value={{
@@ -105,7 +111,9 @@ function AuthProvider({children}) {
             signIn,
             loadingAuth,
             setUser,
-            storageUser
+            storageUser,
+            copiCode,
+            cupom
         }}>
             {children}
         </AuthContext.Provider>

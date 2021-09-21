@@ -54,7 +54,7 @@ function Enterprise() {
                 <div className="image">
                 <img src={companyImg} alt="imagem" />
                 </div>
-                <Link className="btn-company">VEJA COMO SER UM PARCEIRO</Link>
+                <Link to="/companies" className="btn-company">VEJA COMO SER UM PARCEIRO</Link>
             </div>
 
 

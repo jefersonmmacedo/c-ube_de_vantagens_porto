@@ -5,6 +5,8 @@ import {
   NavLink,
   Bars,
   NavMenu,
+  NavBtn,
+  NavBtnLink
 } from './NavbarElements';
 
 const Navbar = () => {
@@ -16,25 +18,28 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/regulation' activeStyle>
-          Regulamento
+          <NavLink to='/admin/dashboard' activeStyle>
+          Painel
           </NavLink>
-          <NavLink to='/companies' activeStyle>
-            Onde Usar?
+          <NavLink to='/admin/companyadmin' activeStyle>
+            Parceiros
           </NavLink>
-          <NavLink to='/partners' activeStyle>
-            Seja um parceiro
+          <NavLink to='/admin/cuponsadmin' activeStyle>
+            Cupons
           </NavLink>
-          <NavLink to='/contact' activeStyle>
-            Fale Conosco
+          <NavLink to='/admin/users' activeStyle>
+            Usuários
           </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+          <NavBtn>
+            <NavBtnLink to='/searchcupom'>X Sair</NavBtnLink>
+         </NavBtn>
         </NavMenu>
-    
       </Nav>
     </div>
   );
 };
 
 export default Navbar;
+
+
+    

@@ -47,7 +47,7 @@ function ValidadeCupom() {
                                 setDisponible('Expirado')
                             }
 
-                            toast.success('Busca realizada com sucesso!');
+                            toast.success('Cupom validado com sucesso!');
                         }).catch(error => {
                             console.log(error)
                             toast.error('Ops. Deu algo errado');

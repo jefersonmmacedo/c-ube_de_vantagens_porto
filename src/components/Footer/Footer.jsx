@@ -32,7 +32,7 @@ function Footer() {
             <h4>FALE CONOSCO</h4>
             <p>< FiPhoneCall /> 22 3031-4272</p>
                     <p>< FiMail /> reservas@portorentacar.com.br</p>
-                    <p>< FiMapPin /> Shopping Ipanema Mall - Rua Raul Veiga,</p>
+                    <p>< FiMapPin /> Shopping Ipanema Mall <br /> Rua Raul Veiga,</p>
                     <p className="line">389 – Loja 28 – Centro, Cabo Frio – RJ</p>
             </div>
             </div>

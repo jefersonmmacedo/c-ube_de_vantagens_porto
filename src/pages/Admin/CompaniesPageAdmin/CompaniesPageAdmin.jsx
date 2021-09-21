@@ -3,6 +3,7 @@ import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
 import Navbar2 from '../../../components/NavbarAdmin/index';
 import './companiesPageAdmin.css';
+import { Link } from 'react-router-dom';
 
 function CompanyPageAdmin() {
     const [data, setData] = useState([]);
@@ -50,6 +51,8 @@ function CompanyPageAdmin() {
         <div className="dashboard-data">
                         <div className="data-company">
             <h3>PARCEIROS CADASTRADOS</h3>
+           <br />
+           <Link className="btn-header-2" to='/Admin/newcompany'>+ Cadastrar Novo Parceiro</Link>
            <br />
            {
                    data.map((company) => {

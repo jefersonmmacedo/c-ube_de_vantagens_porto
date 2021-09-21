@@ -3,6 +3,7 @@ import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
 import Navbar2 from '../../../components/NavbarAdmin/index';
 import './userAdmin.css'
+import { Link } from 'react-router-dom';
 
 function UsersAdmin() {
     const [users, setUsers] = useState([]);
@@ -56,6 +57,8 @@ function UsersAdmin() {
         <div className="data-cupons">
                 <h3>USUÁRIOS CADASTRADOS</h3>
                <br />
+               <Link className="btn-header-2" to='/Admin/signup'>+ Cadastrar Novo Usuário</Link>
+               <br/>
                {
                    users.map((user) => {
                        return (

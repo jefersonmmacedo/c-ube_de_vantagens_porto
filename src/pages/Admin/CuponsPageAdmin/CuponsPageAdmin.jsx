@@ -3,6 +3,7 @@ import {toast} from 'react-toastify';
 import firebase from '../../../services/firebaseConnection';
 import Navbar2 from '../../../components/NavbarAdmin/index';
 import './cuponsPageAdmin.css'
+import { Link } from 'react-router-dom';
 
 function CuponsPageAdmin() {
     const [cupons, setCupons] = useState([]);
@@ -47,6 +48,8 @@ function CuponsPageAdmin() {
         <div className="dashboard-data">
         <div className="data-cupons">
                 <h3>ULTIMOS CUPONS GERADOS</h3>
+               <br />
+               <Link className="btn-header-2" to='/Admin/newcupom'>+ Gerar Novo Cupom</Link>
                <br />
                {
                    cupons.map((cupom) => {

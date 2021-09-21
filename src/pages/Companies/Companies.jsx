@@ -3,6 +3,7 @@ import Footer from '../../components/Footer/Footer';
 import {toast} from 'react-toastify';
 import firebase from '../../services/firebaseConnection';
 import './companies.css';
+import Navbar from '../../components/Navbar/index'
 
 
 function Companies() {
@@ -94,6 +95,7 @@ function Companies() {
 
     return (
         <div className="container">
+            <Navbar />
         <div className="content">
             <div className="companies">
                 <h1>NOSSOS PARCEIROS</h1>

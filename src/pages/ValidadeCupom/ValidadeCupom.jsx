@@ -5,6 +5,7 @@ import firebase from '../../services/firebaseConnection';
 import './validadeCupom.css';
 import { AuthContext } from '../../contexts/Auth';
 import {FiClipboard, FiCheckCircle} from 'react-icons/fi'
+import Navbar from '../../components/Navbar/index'
 
 
 function ValidadeCupom() {
@@ -65,6 +66,7 @@ function ValidadeCupom() {
 
     return (
         <div className="container">
+            <Navbar />
         <div className="content">
         <div className="box">
             <h1> VALIDAR MEU CUPOM</h1>

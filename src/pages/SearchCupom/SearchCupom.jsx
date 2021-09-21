@@ -6,6 +6,7 @@ import firebase from '../../services/firebaseConnection';
 import {FiCopy, FiCheckCircle} from 'react-icons/fi'
 import './searchCupom.css'
 import { AuthContext } from '../../contexts/Auth';
+import Navbar from '../../components/Navbar/index'
 
 function SearchCupom() {
         const {copiCode} = useContext(AuthContext)
@@ -71,6 +72,7 @@ function handleRedirect() {
     
     return (
         <div className="container">
+            <Navbar />
         <div className="content">
         <div className="box">
             <br/> <br/> <br/> <br/>

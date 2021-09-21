@@ -1,10 +1,12 @@
 import Footer from "../../components/Footer/Footer";
 import tableImage from '../../assets/images/imagePolicy1.png'
 import tableImage2 from '../../assets/images/imagePolicy2.png'
+import Navbar from '../../components/Navbar/index'
 import './privacyPolicyPage.css'
 function PrivacyPolicyPage() {
     return (
         <div className="container">
+            <Navbar /> 
             <div className="content">
                 <div className="privacyPolicyPage">
                     <h1>POLÍTICA DE PRIVACIDADE</h1>

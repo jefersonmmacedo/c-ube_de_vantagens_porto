@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import { AuthContext } from '../../contexts/Auth';
 import {toast} from'react-toastify';
+import Navbar from '../../components/Navbar/index'
 import './signIn.css'
 
 function SignIn() {
@@ -21,6 +22,7 @@ function SignIn() {
     }
     return (
         <div className="container">
+            <Navbar />
         <div className="content">
         <div className="box">
             <h1> FAÇA LOGIN NO SISTEMA</h1>

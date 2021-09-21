@@ -1,10 +1,12 @@
 import React from 'react';
 import Enterprise from '../../components/Enterprise/Enterprise';
 import Footer from '../../components/Footer/Footer';
+import Navbar from '../../components/Navbar/index'
 import './companyPage.css'
 function CompanyPage () {
     return (
         <div className="container">
+            <Navbar />
         <div className="content">
             <div className="companyPage">
                 <h1>SEJA UM PARCEIRO</h1>

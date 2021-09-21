@@ -1,8 +1,10 @@
 import Footer from "../../components/Footer/Footer";
 import './regulationPage.css'
+import Navbar from '../../components/Navbar/index'
 function RegulationPage() {
     return (
         <div className="container">
+            <Navbar />
             <div className="content">
                 <div className="regulation">
                     <h1>REGULAMENTO</h1>

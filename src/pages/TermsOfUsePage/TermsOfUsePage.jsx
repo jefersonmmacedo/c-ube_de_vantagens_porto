@@ -1,8 +1,10 @@
 import Footer from "../../components/Footer/Footer";
+import Navbar from '../../components/Navbar/index'
 import './termsOfUsePage.css'
 function TermsOfUsePage() {
     return (
         <div className="container">
+            <Navbar />
             <div className="content">
                 <div className="termsOfUsePage">
                     <h1>TERMOS DE USO</h1>

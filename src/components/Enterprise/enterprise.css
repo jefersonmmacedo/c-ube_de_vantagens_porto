@@ -4,18 +4,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
+
 .company .company-texts {
   width: 320px;
   margin-top: 150px;
 }
+
 .company .company-texts .company-text-iten {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+
 .company .company-texts .company-text-iten svg {
   margin: -80px 20px 0 0;
 }
@@ -32,6 +34,7 @@
   justify-content: space-between;
   text-align: right;
 }
+
 .company .company-texts .company-text-iten2 svg {
   margin: -80px 0 0 20px;
 }
@@ -47,12 +50,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .company .title img {
   width: 325px;
 }
+
 .company .title .image img {
   width: 560px;
 }
+
 .company .title a {
   background-color: #2e4562;
   text-decoration: none;
@@ -63,22 +69,22 @@
   margin-top: 30px;
 }
 
-
-@media (max-width: 1080px)
-{
-  .company .title{
+@media (max-width: 1080px) {
+  .company .title {
     display: none;
   }
 
-  .company .company-texts  {
+  .company .company-texts {
     width: 450px;
     padding: 0 30px;
   }
+
   @media (max-width: 1080px) {
-    .company .company-texts  {
+    .company .company-texts {
       width: 500px;
       padding: 0 30px;
     }
+
     .company {
       margin-top: -10px;
       display: flex;
@@ -105,14 +111,12 @@
       width: 400px;
       margin-top: 20px;
     }
+
     @media (max-width: 400px) {
       .company .company-texts {
         width: 300px;
         margin: 0 0 0 -10px;
       }
     }
-
   }
-
-
 }
